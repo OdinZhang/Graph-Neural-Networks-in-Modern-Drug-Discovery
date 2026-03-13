@@ -1,0 +1,39 @@
+[submodule "Chapter7/source_repos/rdchiral"]
+	path = Chapter7/source_repos/rdchiral
+	url = https://github.com/connorcoley/rdchiral.git
+[submodule "Chapter7/source_repos/rxnmapper"]
+	path = Chapter7/source_repos/rxnmapper
+	url = https://github.com/rxn4chemistry/rxnmapper.git
+[submodule "Chapter7/source_repos/gln"]
+	path = Chapter7/source_repos/gln
+	url = https://github.com/Hanjun-Dai/GLN.git
+[submodule "Chapter7/source_repos/LocalRetro"]
+	path = Chapter7/source_repos/LocalRetro
+	url = https://github.com/kaist-amsg/LocalRetro.git
+[submodule "Chapter7/source_repos/graphretro"]
+	path = Chapter7/source_repos/graphretro
+	url = https://github.com/vsomnath/graphretro.git
+[submodule "Chapter7/source_repos/Graph2Edits"]
+	path = Chapter7/source_repos/Graph2Edits
+	url = https://github.com/Jamson-Zhong/Graph2Edits.git
+[submodule "Chapter7/source_repos/megan"]
+	path = Chapter7/source_repos/megan
+	url = https://github.com/molecule-one/megan.git
+[submodule "Chapter7/source_repos/LocalTransform"]
+	path = Chapter7/source_repos/LocalTransform
+	url = https://github.com/kaist-amsg/LocalTransform.git
+[submodule "Chapter7/source_repos/rexgen_direct"]
+	path = Chapter7/source_repos/rexgen_direct
+	url = https://github.com/connorcoley/rexgen_direct.git
+[submodule "Chapter7/source_repos/torchdrug"]
+	path = Chapter7/source_repos/torchdrug
+	url = https://github.com/DeepGraphLearning/torchdrug.git
+[submodule "Chapter7/source_repos/LocalRetro"]
+	path = Chapter7/source_repos/LocalRetro
+	url = https://github.com/kaist-amsg/LocalRetro.git
+[submodule "Chapter7/source_repos/graphretro"]
+	path = Chapter7/source_repos/graphretro
+	url = https://github.com/vsomnath/graphretro.git
+[submodule "Chapter7/source_repos/Graph2Edits"]
+	path = Chapter7/source_repos/Graph2Edits
+	url = https://github.com/Jamson-Zhong/Graph2Edits.git
