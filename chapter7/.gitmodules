@@ -33,3 +33,7 @@
 [submodule "source_repos/rexgen_direct"]
 	path = source_repos/rexgen_direct
 	url = https://github.com/connorcoley/rexgen_direct.git
+
+[submodule "source_repos/torchdrug"]
+	path = source_repos/torchdrug
+	url = https://github.com/DeepGraphLearning/torchdrug.git
