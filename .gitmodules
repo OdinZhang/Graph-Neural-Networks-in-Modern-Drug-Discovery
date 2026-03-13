@@ -1,0 +1,35 @@
+[submodule "source_repos/rdchiral"]
+	path = source_repos/rdchiral
+	url = https://github.com/connorcoley/rdchiral.git
+
+[submodule "source_repos/rxnmapper"]
+	path = source_repos/rxnmapper
+	url = https://github.com/rxn4chemistry/rxnmapper.git
+
+[submodule "source_repos/gln"]
+	path = source_repos/gln
+	url = https://github.com/Hanjun-Dai/GLN.git
+
+[submodule "source_repos/LocalRetro"]
+	path = source_repos/LocalRetro
+	url = https://github.com/kaist-amsg/LocalRetro.git
+
+[submodule "source_repos/graphretro"]
+	path = source_repos/graphretro
+	url = https://github.com/vsomnath/graphretro.git
+
+[submodule "source_repos/Graph2Edits"]
+	path = source_repos/Graph2Edits
+	url = https://github.com/Jamson-Zhong/Graph2Edits.git
+
+[submodule "source_repos/megan"]
+	path = source_repos/megan
+	url = https://github.com/molecule-one/megan.git
+
+[submodule "source_repos/LocalTransform"]
+	path = source_repos/LocalTransform
+	url = https://github.com/kaist-amsg/LocalTransform.git
+
+[submodule "source_repos/rexgen_direct"]
+	path = source_repos/rexgen_direct
+	url = https://github.com/connorcoley/rexgen_direct.git
