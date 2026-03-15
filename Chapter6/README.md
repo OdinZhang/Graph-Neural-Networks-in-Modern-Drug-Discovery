@@ -350,6 +350,7 @@ python run.py
 
 ## 参考文献
 
+- **PrimeKG**：Chandak, et al. (2022). *Scientific Data*.
 - **HINGRL**：Zhao B W, et al. (2022). *Briefings in Bioinformatics*.
 - **iGRLDTI**：Zhao B W, et al. (2022).*Bioinformatics*.
 - **TxGNN**：Huang K, et al. (2023). *Nature Medicine*.
