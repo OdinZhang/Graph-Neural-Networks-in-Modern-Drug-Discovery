@@ -28,3 +28,42 @@
 [submodule "Chapter7/source_repos/torchdrug"]
 	path = Chapter7/source_repos/torchdrug
 	url = https://github.com/DeepGraphLearning/torchdrug.git
+[submodule "Chapter3/source_repos/InteractionGraphNet"]
+	path = Chapter3/source_repos/InteractionGraphNet
+	url = https://github.com/zjujdj/InteractionGraphNet.git
+[submodule "Chapter3/source_repos/PIGNet"]
+	path = Chapter3/source_repos/PIGNet
+	url = https://github.com/ACE-KAIST/PIGNet.git
+[submodule "Chapter3/source_repos/RTMScore"]
+	path = Chapter3/source_repos/RTMScore
+	url = https://github.com/sc8668/RTMScore.git
+[submodule "Chapter3/source_repos/DiffDock"]
+	path = Chapter3/source_repos/DiffDock
+	url = https://github.com/gcorso/DiffDock.git
+[submodule "Chapter3/source_repos/KarmaDock"]
+	path = Chapter3/source_repos/KarmaDock
+	url = https://github.com/schrojunzhang/KarmaDock.git
+[submodule "Chapter3/source_repos/TankBind"]
+	path = Chapter3/source_repos/TankBind
+	url = https://github.com/luwei0917/TankBind.git
+[submodule "Chapter3/source_repos/CarsiDock"]
+	path = Chapter3/source_repos/CarsiDock
+	url = https://github.com/carbonsilicon-ai/CarsiDock.git
+[submodule "Chapter3/source_repos/MetalloDock"]
+	path = Chapter3/source_repos/MetalloDock
+	url = https://github.com/SII-ZhangHui/MetalloDock.git
+[submodule "Chapter3/source_repos/FlexPose"]
+	path = Chapter3/source_repos/FlexPose
+	url = https://github.com/tiejundong/FlexPose.git
+[submodule "Chapter3/source_repos/CarsiInduce"]
+	path = Chapter3/source_repos/CarsiInduce
+	url = https://github.com/xqh19970407/CarsiInduce.git
+[submodule "Chapter3/source_repos/DynamicBind"]
+	path = Chapter3/source_repos/DynamicBind
+	url = https://github.com/luwei0917/DynamicBind.git
+[submodule "Chapter3/source_repos/DiffDock-Pocket"]
+	path = Chapter3/source_repos/DiffDock-Pocket
+	url = https://github.com/plainerman/DiffDock-Pocket.git
+[submodule "Chapter3/source_repos/GrASP"]
+	path = Chapter3/source_repos/GrASP
+	url = https://github.com/tiwarylab/GrASP.git
