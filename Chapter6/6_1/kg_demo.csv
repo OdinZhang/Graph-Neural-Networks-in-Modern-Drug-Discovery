@@ -1,0 +1,541 @@
+relation,display_relation,x_type,x_name,y_type,y_name
+disease_protein,associated with,gene/protein,TP53,disease,adrenal cortex carcinoma
+disease_protein,associated with,disease,spindle cell sarcoma,gene/protein,TP53
+disease_protein,associated with,gene/protein,TP53,disease,head and neck cancer
+disease_protein,associated with,gene/protein,TP53,disease,skin carcinoma
+disease_protein,associated with,gene/protein,ABCB1,disease,kidney cancer
+disease_protein,associated with,disease,anxiety disorder,gene/protein,ALB
+disease_protein,associated with,disease,non-alcoholic steatohepatitis,gene/protein,TF
+disease_protein,associated with,disease,monogenic obesity,gene/protein,TF
+disease_protein,associated with,disease,malignant mesothelioma (disease),gene/protein,TF
+disease_protein,associated with,gene/protein,ALB,disease,dysthymic disorder
+disease_protein,associated with,disease,stroke disorder,gene/protein,ALB
+disease_protein,associated with,disease,prostate cancer,gene/protein,TP53
+disease_protein,associated with,gene/protein,TP53,disease,therapy related acute myeloid leukemia and myelodysplastic syndrome
+disease_protein,associated with,gene/protein,TP53,disease,prostate cancer
+disease_protein,associated with,gene/protein,ALB,disease,uveitis
+disease_protein,associated with,gene/protein,ABCB1,disease,hepatocellular carcinoma
+disease_protein,associated with,gene/protein,TP53,disease,giant cell glioblastoma
+disease_protein,associated with,disease,thymic carcinoma,gene/protein,TP53
+disease_protein,associated with,gene/protein,TP53,disease,intrahepatic cholangiocarcinoma
+disease_protein,associated with,gene/protein,ABCB1,disease,breast cancer
+disease_protein,associated with,disease,chromosome 17p deletion,gene/protein,TP53
+disease_protein,associated with,gene/protein,TP53,disease,sarcomatoid carcinoma
+disease_protein,associated with,disease,granulomatous slack skin disease,gene/protein,TP53
+disease_protein,associated with,disease,carcinoma,gene/protein,TF
+disease_protein,associated with,gene/protein,CYP3A4,disease,squamous cell carcinoma of the corpus uteri
+disease_protein,associated with,gene/protein,CYP3A4,disease,hereditary breast carcinoma
+disease_protein,associated with,gene/protein,ALB,disease,aseptic meningitis
+disease_protein,associated with,disease,kidney cancer,gene/protein,TP53
+disease_protein,associated with,disease,benign breast phyllodes tumor,gene/protein,TP53
+disease_protein,associated with,disease,ovarian endometrioid adenocarcinoma,gene/protein,TP53
+drug_protein,carrier,gene/protein,ALB,drug,Chlorpromazine
+drug_protein,carrier,drug,Naloxone,gene/protein,ALB
+drug_protein,carrier,gene/protein,ALB,drug,Miconazole
+drug_protein,carrier,gene/protein,ALB,drug,Ibrutinib
+drug_protein,carrier,drug,Betamethasone,gene/protein,ALB
+drug_protein,carrier,drug,Sulfamethazine,gene/protein,ALB
+drug_protein,carrier,gene/protein,ALB,drug,Omadacycline
+drug_protein,carrier,drug,Cefalotin,gene/protein,ALB
+drug_protein,carrier,gene/protein,ALB,drug,Rosiglitazone
+drug_protein,carrier,drug,Benzatropine,gene/protein,ALB
+drug_protein,carrier,drug,Delafloxacin,gene/protein,ALB
+drug_protein,carrier,drug,Captopril,gene/protein,ALB
+drug_protein,carrier,gene/protein,ALB,drug,Cefiderocol
+drug_protein,carrier,drug,Revefenacin,gene/protein,ALB
+drug_protein,carrier,gene/protein,ALB,drug,Meclizine
+drug_protein,carrier,drug,Clomipramine,gene/protein,ALB
+drug_protein,carrier,gene/protein,ALB,drug,Revefenacin
+drug_protein,carrier,drug,Stearic acid,gene/protein,ALB
+drug_protein,carrier,gene/protein,ALB,drug,Cisplatin
+drug_protein,carrier,gene/protein,ALB,drug,Hydroflumethiazide
+drug_protein,carrier,drug,Acetrizoic acid,gene/protein,ALB
+drug_protein,carrier,drug,Verapamil,gene/protein,ALB
+drug_protein,carrier,drug,Imipramine,gene/protein,ALB
+drug_protein,carrier,drug,Calcium phosphate dihydrate,gene/protein,ALB
+drug_protein,carrier,drug,Cloxacillin,gene/protein,ALB
+drug_protein,carrier,drug,Triheptanoin,gene/protein,ALB
+drug_protein,carrier,gene/protein,ALB,drug,Nifedipine
+drug_protein,carrier,drug,Levamlodipine,gene/protein,ALB
+drug_protein,carrier,drug,Betamethasone phosphate,gene/protein,ALB
+drug_protein,carrier,drug,Mangafodipir,gene/protein,ALB
+contraindication,contraindication,disease,congenital hypothyroidism,drug,Morphine
+contraindication,contraindication,drug,Nicotine,disease,acute coronary syndrome
+contraindication,contraindication,disease,type 1 diabetes mellitus,drug,Nicotine
+contraindication,contraindication,disease,gallbladder disease,drug,Nicotine
+contraindication,contraindication,disease,nephrolithiasis,drug,Vitamin A
+contraindication,contraindication,disease,nephrocalcinosis,drug,Vitamin A
+contraindication,contraindication,drug,Morphine,disease,esophagitis (disease)
+contraindication,contraindication,drug,Vitamin A,disease,hereditary hemochromatosis
+contraindication,contraindication,disease,temporomandibular joint disorder,drug,Nicotine
+contraindication,contraindication,disease,gastroesophageal reflux disease,drug,Morphine
+contraindication,contraindication,disease,long QT syndrome,drug,Morphine
+contraindication,contraindication,drug,Morphine,disease,substance abuse/dependence
+contraindication,contraindication,drug,Nicotine,disease,temporomandibular joint disorder
+contraindication,contraindication,disease,drug psychosis,drug,Morphine
+contraindication,contraindication,disease,familial glucocorticoid deficiency,drug,Morphine
+contraindication,contraindication,drug,Nicotine,disease,substance abuse/dependence
+contraindication,contraindication,disease,gastroesophageal reflux disease,drug,Nicotine
+contraindication,contraindication,drug,Nicotine,disease,hypophosphatemia (disease)
+contraindication,contraindication,drug,Ciprofloxacin,disease,peripheral nervous system disease
+contraindication,contraindication,drug,Morphine,disease,pyloric stenosis (disease)
+contraindication,contraindication,drug,Morphine,disease,familial long QT syndrome
+contraindication,contraindication,drug,Morphine,disease,urethral stricture (disease)
+contraindication,contraindication,drug,Vitamin A,disease,liver disease
+contraindication,contraindication,drug,Nicotine,disease,pharyngitis
+contraindication,contraindication,drug,Ciprofloxacin,disease,perinatal necrotizing enterocolitis
+contraindication,contraindication,drug,Morphine,disease,myasthenia gravis
+contraindication,contraindication,drug,Vitamin A,disease,hypercalcemia disease
+contraindication,contraindication,disease,hypertensive disorder,drug,Morphine
+contraindication,contraindication,disease,Wernicke-Korsakoff syndrome,drug,Morphine
+contraindication,contraindication,drug,Ciprofloxacin,disease,potassium deficiency disease
+drug_protein,enzyme,drug,Fulvestrant,gene/protein,CYP3A4
+drug_protein,enzyme,gene/protein,CYP3A4,drug,Fentanyl
+drug_protein,enzyme,drug,Econazole,gene/protein,CYP3A4
+drug_protein,enzyme,drug,Etoricoxib,gene/protein,CYP3A4
+drug_protein,enzyme,gene/protein,CYP3A4,drug,Dronedarone
+drug_protein,enzyme,gene/protein,CYP3A4,drug,Cabozantinib
+drug_protein,enzyme,drug,Lorcaserin,gene/protein,CYP3A4
+drug_protein,enzyme,gene/protein,CYP3A4,drug,Remdesivir
+drug_protein,enzyme,gene/protein,CYP3A4,drug,Clascoterone
+drug_protein,enzyme,drug,Omeprazole,gene/protein,CYP3A4
+drug_protein,enzyme,gene/protein,CYP3A4,drug,Hydrocortisone
+drug_protein,enzyme,drug,Sulfadiazine,gene/protein,CYP3A4
+drug_protein,enzyme,gene/protein,CYP3A4,drug,Istradefylline
+drug_protein,enzyme,drug,Sulfanilamide,gene/protein,CYP3A4
+drug_protein,enzyme,gene/protein,CYP3A4,drug,Flucloxacillin
+drug_protein,enzyme,drug,Dolutegravir,gene/protein,CYP3A4
+drug_protein,enzyme,drug,Iloperidone,gene/protein,CYP3A4
+drug_protein,enzyme,drug,Nicotine,gene/protein,CYP2E1
+drug_protein,enzyme,drug,Sertraline,gene/protein,CYP3A4
+drug_protein,enzyme,drug,Stiripentol,gene/protein,CYP3A4
+drug_protein,enzyme,drug,Reboxetine,gene/protein,CYP3A4
+drug_protein,enzyme,drug,Lemborexant,gene/protein,CYP3A4
+drug_protein,enzyme,gene/protein,CYP3A4,drug,Eletriptan
+drug_protein,enzyme,drug,Tacrolimus,gene/protein,CYP3A4
+drug_protein,enzyme,gene/protein,CYP3A4,drug,Risperidone
+drug_protein,enzyme,gene/protein,CYP3A4,drug,Digitoxin
+drug_protein,enzyme,gene/protein,CYP3A4,drug,Olanzapine
+drug_protein,enzyme,gene/protein,CYP3A4,drug,Zonisamide
+drug_protein,enzyme,drug,Gestodene,gene/protein,CYP3A4
+drug_protein,enzyme,gene/protein,CYP3A4,drug,Triclabendazole
+anatomy_protein_absent,expression absent,gene/protein,ABCB1,anatomy,nasal cavity epithelium
+anatomy_protein_absent,expression absent,gene/protein,TF,anatomy,metanephros
+anatomy_protein_absent,expression absent,gene/protein,ALB,anatomy,quadriceps femoris
+anatomy_protein_absent,expression absent,anatomy,myocardium,gene/protein,ALB
+anatomy_protein_absent,expression absent,anatomy,quadriceps femoris,gene/protein,ALB
+anatomy_protein_absent,expression absent,anatomy,metanephric glomerulus,gene/protein,TF
+anatomy_protein_absent,expression absent,anatomy,nasal cavity epithelium,gene/protein,ABCB1
+anatomy_protein_absent,expression absent,anatomy,metanephros,gene/protein,TF
+anatomy_protein_absent,expression absent,gene/protein,TF,anatomy,decidua
+anatomy_protein_absent,expression absent,anatomy,decidua,gene/protein,ALB
+anatomy_protein_absent,expression absent,gene/protein,TP53,anatomy,cerebellar vermis
+anatomy_protein_absent,expression absent,gene/protein,ALB,anatomy,decidua
+anatomy_protein_absent,expression absent,anatomy,decidua,gene/protein,TF
+anatomy_protein_absent,expression absent,anatomy,cerebellar vermis,gene/protein,TP53
+anatomy_protein_absent,expression absent,gene/protein,TF,anatomy,metanephric glomerulus
+anatomy_protein_absent,expression absent,gene/protein,ALB,anatomy,myocardium
+anatomy_protein_absent,expression absent,gene/protein,ADAMTS16,anatomy,nasal cavity epithelium
+anatomy_protein_absent,expression absent,gene/protein,NPR3,anatomy,cerebellar vermis
+anatomy_protein_absent,expression absent,gene/protein,PANX2,anatomy,quadriceps femoris
+anatomy_protein_absent,expression absent,gene/protein,LAMC3,anatomy,nasal cavity epithelium
+anatomy_protein_absent,expression absent,gene/protein,TCIRG1,anatomy,vastus lateralis
+anatomy_protein_absent,expression absent,gene/protein,CACNG1,anatomy,dorsal plus ventral thalamus
+anatomy_protein_absent,expression absent,gene/protein,C4BPB,anatomy,trachea
+anatomy_protein_absent,expression absent,anatomy,deltoid,gene/protein,FXYD4
+anatomy_protein_absent,expression absent,anatomy,nasal cavity epithelium,gene/protein,FBXO17
+anatomy_protein_absent,expression absent,gene/protein,KRT222,anatomy,quadriceps femoris
+anatomy_protein_absent,expression absent,gene/protein,TCF19,anatomy,deltoid
+anatomy_protein_absent,expression absent,anatomy,metanephric glomerulus,gene/protein,LHB
+anatomy_protein_absent,expression absent,anatomy,quadriceps femoris,gene/protein,CENPA
+anatomy_protein_absent,expression absent,gene/protein,PNMT,anatomy,hair follicle
+anatomy_protein_present,expression present,anatomy,prostate gland,gene/protein,TP53
+anatomy_protein_present,expression present,anatomy,cerebellum,gene/protein,TF
+anatomy_protein_present,expression present,gene/protein,TF,anatomy,stomach
+anatomy_protein_present,expression present,gene/protein,TF,anatomy,cerebellar vermis
+anatomy_protein_present,expression present,gene/protein,ALB,anatomy,renal glomerulus
+anatomy_protein_present,expression present,anatomy,material anatomical entity,gene/protein,ALB
+anatomy_protein_present,expression present,anatomy,quadriceps femoris,gene/protein,TF
+anatomy_protein_present,expression present,gene/protein,TP53,anatomy,forebrain
+anatomy_protein_present,expression present,anatomy,uterus,gene/protein,TF
+anatomy_protein_present,expression present,anatomy,saliva-secreting gland,gene/protein,ALB
+anatomy_protein_present,expression present,anatomy,tongue,gene/protein,TF
+anatomy_protein_present,expression present,gene/protein,CYP3A4,anatomy,adipose tissue
+anatomy_protein_present,expression present,anatomy,prostate gland,gene/protein,TF
+anatomy_protein_present,expression present,gene/protein,CYP3A4,anatomy,peritoneum
+anatomy_protein_present,expression present,anatomy,cortex of kidney,gene/protein,CYP3A4
+anatomy_protein_present,expression present,gene/protein,TF,anatomy,primary visual cortex
+anatomy_protein_present,expression present,anatomy,uterus,gene/protein,ABCB1
+anatomy_protein_present,expression present,anatomy,sigmoid colon,gene/protein,ABCB1
+anatomy_protein_present,expression present,gene/protein,CYP3A4,anatomy,adult mammalian kidney
+anatomy_protein_present,expression present,gene/protein,CYP3A4,anatomy,colon
+anatomy_protein_present,expression present,gene/protein,ALB,anatomy,female gonad
+anatomy_protein_present,expression present,anatomy,cingulate cortex,gene/protein,TF
+anatomy_protein_present,expression present,anatomy,liver,gene/protein,CYP3A4
+anatomy_protein_present,expression present,anatomy,blood,gene/protein,CYP3A4
+anatomy_protein_present,expression present,anatomy,prostate gland,gene/protein,ALB
+anatomy_protein_present,expression present,gene/protein,TF,anatomy,fundus of stomach
+anatomy_protein_present,expression present,anatomy,lymph node,gene/protein,ALB
+anatomy_protein_present,expression present,anatomy,metanephros,gene/protein,ABCB1
+anatomy_protein_present,expression present,anatomy,dorsolateral prefrontal cortex,gene/protein,ALB
+anatomy_protein_present,expression present,anatomy,islet of Langerhans,gene/protein,ABCB1
+indication,indication,disease,malignant Sertoli-Leydig cell tumor of ovary,drug,Doxorubicin
+indication,indication,drug,Doxorubicin,disease,diffuse large B-cell lymphoma of the central nervous system
+indication,indication,disease,obsolete Hodgkin's granuloma,drug,Doxorubicin
+indication,indication,disease,shigellosis,drug,Ciprofloxacin
+indication,indication,drug,Doxorubicin,disease,immature ovarian teratoma
+indication,indication,disease,intravascular large B-cell lymphoma,drug,Doxorubicin
+indication,indication,disease,lymphoma,drug,Doxorubicin
+indication,indication,drug,Doxorubicin,disease,primary central nervous system lymphoma
+indication,indication,drug,Ciprofloxacin,disease,lymphogranuloma venereum
+indication,indication,drug,Ciprofloxacin,disease,maxillary sinusitis
+indication,indication,drug,Ciprofloxacin,disease,intestinal infectious disease
+indication,indication,drug,Acetaminophen,disease,common cold
+indication,indication,disease,external ear disease,drug,Ciprofloxacin
+indication,indication,disease,intestinal infectious disease,drug,Ciprofloxacin
+indication,indication,disease,neuroblastoma,drug,Doxorubicin
+indication,indication,drug,Doxorubicin,disease,ovarian adenocarcinoma
+indication,indication,drug,Doxorubicin,disease,Hodgkin's paragranuloma
+indication,indication,drug,Doxorubicin,disease,plasmablastic lymphoma
+indication,indication,drug,Doxorubicin,disease,T-cell/histiocyte rich large B cell lymphoma
+indication,indication,drug,Nicotine,disease,pellagra
+indication,indication,drug,Doxorubicin,disease,malignant dysgerminomatous germ cell tumor of ovary
+indication,indication,disease,diarrheal disease,drug,Ciprofloxacin
+indication,indication,disease,Burkitt lymphoma,drug,Doxorubicin
+indication,indication,disease,acute myeloid leukemia with t(9;11)(p22;q23),drug,Doxorubicin
+indication,indication,disease,staphylococcal infection,drug,Ciprofloxacin
+indication,indication,disease,ovarian cancer,drug,Doxorubicin
+indication,indication,drug,Doxorubicin,disease,"primary cutaneous diffuse large B-cell lymphoma, Leg type"
+indication,indication,drug,Doxorubicin,disease,obsolete Hodgkin's granuloma
+indication,indication,disease,conjunctivitis,drug,Ciprofloxacin
+indication,indication,disease,malignant sex cord stromal tumor of ovary,drug,Doxorubicin
+bioprocess_protein,interacts with,gene/protein,TP53,biological_process,signal transduction by p53 class mediator
+bioprocess_protein,interacts with,gene/protein,TP53,biological_process,intrinsic apoptotic signaling pathway
+bioprocess_protein,interacts with,biological_process,negative regulation of pentose-phosphate shunt,gene/protein,TP53
+bioprocess_protein,interacts with,gene/protein,CYP3A4,biological_process,heterocycle metabolic process
+bioprocess_protein,interacts with,gene/protein,TP53,biological_process,cellular response to UV
+bioprocess_protein,interacts with,biological_process,cellular response to starvation,gene/protein,ALB
+cellcomp_protein,interacts with,cellular_component,clathrin-coated endocytic vesicle membrane,gene/protein,TF
+molfunc_protein,interacts with,molecular_function,phosphatidylethanolamine flippase activity,gene/protein,ABCB1
+exposure_bioprocess,interacts with,biological_process,transmission of nerve impulse,exposure,Nicotine
+molfunc_protein,interacts with,gene/protein,TP53,molecular_function,disordered domain specific binding
+pathway_protein,interacts with,gene/protein,TP53,pathway,PI5P Regulates TP53 Acetylation
+bioprocess_protein,interacts with,biological_process,steroid catabolic process,gene/protein,CYP3A4
+pathway_protein,interacts with,pathway,The role of GTSE1 in G2/M progression after G2 checkpoint,gene/protein,TP53
+bioprocess_protein,interacts with,gene/protein,TP53,biological_process,negative regulation of helicase activity
+bioprocess_protein,interacts with,biological_process,iron ion homeostasis,gene/protein,TF
+molfunc_protein,interacts with,gene/protein,ALB,molecular_function,copper ion binding
+molfunc_protein,interacts with,molecular_function,RNA polymerase II-specific DNA-binding transcription factor binding,gene/protein,TP53
+bioprocess_protein,interacts with,gene/protein,TP53,biological_process,negative regulation of cell population proliferation
+cellcomp_protein,interacts with,gene/protein,ABCB1,cellular_component,plasma membrane
+bioprocess_protein,interacts with,biological_process,somitogenesis,gene/protein,TP53
+bioprocess_protein,interacts with,biological_process,regulation of signal transduction by p53 class mediator,gene/protein,TP53
+pathway_protein,interacts with,gene/protein,TP53,pathway,Regulation of TP53 Degradation
+bioprocess_protein,interacts with,biological_process,negative regulation of glucose catabolic process to lactate via pyruvate,gene/protein,TP53
+molfunc_protein,interacts with,gene/protein,TP53,molecular_function,DNA-binding transcription activator activity
+molfunc_protein,interacts with,gene/protein,TP53,molecular_function,"DNA-binding transcription factor activity, RNA polymerase II-specific"
+bioprocess_protein,interacts with,biological_process,rRNA transcription,gene/protein,TP53
+exposure_bioprocess,interacts with,biological_process,regulation of heart rate,exposure,Nicotine
+molfunc_protein,interacts with,gene/protein,CYP3A4,molecular_function,steroid hydroxylase activity
+bioprocess_protein,interacts with,biological_process,maintenance of mitochondrion location,gene/protein,ALB
+molfunc_protein,interacts with,gene/protein,TF,molecular_function,transferrin receptor binding
+exposure_disease,linked to,exposure,Nicotine,disease,erectile dysfunction (disease)
+exposure_disease,linked to,disease,anxiety disorder,exposure,Nicotine
+exposure_disease,linked to,exposure,Acetaminophen,disease,"attention deficit hyperactivity disorder, inattentive type"
+exposure_disease,linked to,disease,nicotine dependence,exposure,Nicotine
+exposure_disease,linked to,exposure,Nicotine,disease,nicotine dependence
+exposure_disease,linked to,exposure,Nicotine,disease,physiological sexual disorder
+exposure_disease,linked to,disease,"attention deficit hyperactivity disorder, inattentive type",exposure,Acetaminophen
+exposure_disease,linked to,exposure,Acetaminophen,disease,cognitive disorder
+exposure_disease,linked to,disease,chronic obstructive pulmonary disease,exposure,Nicotine
+exposure_disease,linked to,exposure,Nicotine,disease,obsessive-compulsive disorder
+exposure_disease,linked to,exposure,Ciprofloxacin,disease,drug-induced liver injury
+exposure_disease,linked to,exposure,Vitamin A,disease,allergic disease
+exposure_disease,linked to,disease,drug-induced liver injury,exposure,Ciprofloxacin
+exposure_disease,linked to,exposure,Nicotine,disease,anxiety disorder
+exposure_disease,linked to,exposure,Nicotine,disease,major depressive disorder
+exposure_disease,linked to,disease,erectile dysfunction (disease),exposure,Nicotine
+exposure_disease,linked to,disease,major depressive disorder,exposure,Nicotine
+exposure_disease,linked to,disease,physiological sexual disorder,exposure,Nicotine
+exposure_disease,linked to,disease,obsessive-compulsive disorder,exposure,Nicotine
+exposure_disease,linked to,disease,allergic disease,exposure,Vitamin A
+exposure_disease,linked to,disease,respiratory system disease,exposure,Nicotine
+exposure_disease,linked to,exposure,Nicotine,disease,respiratory system disease
+exposure_disease,linked to,exposure,Nicotine,disease,chronic obstructive pulmonary disease
+exposure_disease,linked to,disease,cognitive disorder,exposure,Acetaminophen
+exposure_disease,linked to,disease,bronchitis,exposure,Nicotine
+exposure_disease,linked to,exposure,Nicotine,disease,bronchitis
+exposure_disease,linked to,exposure,perfluorohexanesulfonic acid,disease,breast neoplasm
+exposure_disease,linked to,disease,rheumatoid arthritis,exposure,Nitrogen Dioxide
+exposure_disease,linked to,disease,type 2 diabetes mellitus,exposure,Dichlorodiphenyl Dichloroethylene
+exposure_disease,linked to,disease,conjunctivitis (disease),exposure,Soot
+off-label use,off-label use,disease,dysentery,drug,Ciprofloxacin
+off-label use,off-label use,disease,primary cutaneous T-cell non-Hodgkin lymphoma,drug,Doxorubicin
+off-label use,off-label use,drug,Nicotine,disease,hyperlipidemia
+off-label use,off-label use,disease,head and neck cancer,drug,Doxorubicin
+off-label use,off-label use,drug,Doxorubicin,disease,uterine corpus cancer
+off-label use,off-label use,disease,endometrium neoplasm,drug,Doxorubicin
+off-label use,off-label use,drug,Morphine,disease,neuralgia
+off-label use,off-label use,drug,Doxorubicin,disease,head and neck cancer
+off-label use,off-label use,drug,Vitamin A,disease,abetalipoproteinemia
+off-label use,off-label use,disease,liver cancer,drug,Doxorubicin
+off-label use,off-label use,disease,cutaneous anthrax,drug,Ciprofloxacin
+off-label use,off-label use,drug,Ciprofloxacin,disease,inhalational anthrax
+off-label use,off-label use,disease,dermatitis,drug,Vitamin A
+off-label use,off-label use,drug,Doxorubicin,disease,upper aerodigestive tract neoplasm
+off-label use,off-label use,disease,endometrial carcinoma (disease),drug,Doxorubicin
+off-label use,off-label use,disease,myofascial pain syndrome,drug,Acetaminophen
+off-label use,off-label use,drug,Doxorubicin,disease,endometrial cancer
+off-label use,off-label use,drug,Acetaminophen,disease,fibromyalgia
+off-label use,off-label use,disease,fibromyalgia,drug,Acetaminophen
+off-label use,off-label use,drug,Vitamin A,disease,dermatitis
+off-label use,off-label use,drug,Doxorubicin,disease,Ewing sarcoma
+off-label use,off-label use,disease,familial hyperlipidemia,drug,Nicotine
+off-label use,off-label use,drug,Doxorubicin,disease,endometrium neoplasm
+off-label use,off-label use,disease,Richter syndrome,drug,Doxorubicin
+off-label use,off-label use,drug,Acetaminophen,disease,obsolete vascular headache
+off-label use,off-label use,disease,salmonellosis,drug,Ciprofloxacin
+off-label use,off-label use,disease,inhalational anthrax,drug,Ciprofloxacin
+off-label use,off-label use,disease,invasive non-typhoidal salmonellosis,drug,Ciprofloxacin
+off-label use,off-label use,drug,Morphine,disease,neonatal abstinence syndrome
+off-label use,off-label use,drug,Doxorubicin,disease,hepatocellular carcinoma
+exposure_exposure,parent-child,exposure,Anti-Bacterial Agents,exposure,Ciprofloxacin
+exposure_exposure,parent-child,exposure,Nicotine,exposure,Particulate Matter
+exposure_exposure,parent-child,exposure,Carbon Monoxide,exposure,Nicotine
+exposure_exposure,parent-child,exposure,Nicotine,exposure,hydroxycotinine
+exposure_exposure,parent-child,exposure,norcotinine,exposure,Nicotine
+exposure_exposure,parent-child,exposure,Sodium,exposure,Nicotine
+exposure_exposure,parent-child,exposure,anatabine,exposure,Nicotine
+exposure_exposure,parent-child,exposure,Nicotine,exposure,Zinc
+exposure_exposure,parent-child,exposure,Acrolein,exposure,Nicotine
+exposure_exposure,parent-child,exposure,Nicotine,exposure,cotinine-N-oxide
+exposure_exposure,parent-child,exposure,Chlorine,exposure,Nicotine
+exposure_exposure,parent-child,exposure,Nicotine,exposure,1-hydroxypyrene
+exposure_exposure,parent-child,exposure,Anabasine,exposure,Nicotine
+exposure_exposure,parent-child,exposure,Nicotine,exposure,Glycerol
+exposure_exposure,parent-child,exposure,Nicotine,exposure,anatabine
+exposure_exposure,parent-child,exposure,Nicotine,exposure,Acrolein
+exposure_exposure,parent-child,exposure,Nicotine,exposure,Benzene
+exposure_exposure,parent-child,exposure,Nicotine,exposure,Carbon Monoxide
+exposure_exposure,parent-child,exposure,cotinine-N-oxide,exposure,Nicotine
+exposure_exposure,parent-child,exposure,Nicotine,exposure,Chlorine
+exposure_exposure,parent-child,exposure,Ciprofloxacin,exposure,Anti-Bacterial Agents
+exposure_exposure,parent-child,exposure,Chromium,exposure,Nicotine
+exposure_exposure,parent-child,exposure,Phosphorus,exposure,Nicotine
+exposure_exposure,parent-child,exposure,Zinc,exposure,Nicotine
+exposure_exposure,parent-child,exposure,Nicotine,exposure,norcotinine
+exposure_exposure,parent-child,exposure,Nicotine,exposure,myosmine
+exposure_exposure,parent-child,exposure,Polycyclic Aromatic Hydrocarbons,exposure,Nicotine
+exposure_exposure,parent-child,exposure,Particulate Matter,exposure,Nicotine
+exposure_exposure,parent-child,exposure,Nicotine,exposure,Nitric Oxide
+exposure_exposure,parent-child,exposure,Nicotine,exposure,Sulfur
+disease_phenotype_negative,phenotype absent,effect/phenotype,Abnormality of the inner ear,disease,autosomal dominant nonsyndromic deafness
+disease_phenotype_negative,phenotype absent,disease,hereditary spastic paraplegia,effect/phenotype,Urinary incontinence
+disease_phenotype_negative,phenotype absent,disease,acrokeratosis verruciformis,effect/phenotype,Parakeratosis
+disease_phenotype_negative,phenotype absent,effect/phenotype,Renal sodium wasting,disease,apparent mineralocorticoid excess
+disease_phenotype_negative,phenotype absent,disease,chilblain lupus,effect/phenotype,Raynaud phenomenon
+disease_phenotype_negative,phenotype absent,disease,alpha thalassemia-intellectual disability syndrome type 1,effect/phenotype,Abnormal circulating ferritin concentration
+disease_phenotype_negative,phenotype absent,disease,GNE myopathy,effect/phenotype,Quadriceps muscle weakness
+disease_phenotype_negative,phenotype absent,disease,familial long QT syndrome,effect/phenotype,Hearing impairment
+disease_phenotype_negative,phenotype absent,effect/phenotype,Abnormality of the uterus,disease,"46,XX disorder of sex development-skeletal anomalies syndrome"
+disease_phenotype_negative,phenotype absent,disease,trichorhinophalangeal syndrome,effect/phenotype,Intellectual disability
+disease_phenotype_negative,phenotype absent,disease,spastic ataxia,effect/phenotype,Abnormality of the cerebrospinal fluid
+disease_phenotype_negative,phenotype absent,effect/phenotype,Abnormality of skull size,disease,geleophysic dysplasia
+disease_phenotype_negative,phenotype absent,effect/phenotype,Abnormality of the vertebral column,disease,cerebrooculofacioskeletal syndrome
+disease_phenotype_negative,phenotype absent,effect/phenotype,Delayed speech and language development,disease,"intellectual disability, autosomal recessive"
+disease_phenotype_negative,phenotype absent,effect/phenotype,Abnormality of the vertebral column,disease,chondrodysplasia Blomstrand type
+disease_phenotype_negative,phenotype absent,disease,hypotrichosis,effect/phenotype,Abnormality of the dentition
+disease_phenotype_negative,phenotype absent,effect/phenotype,Abnormal sweat gland morphology,disease,pectus excavatum-macrocephaly-dysplastic nails syndrome
+disease_phenotype_negative,phenotype absent,effect/phenotype,Wormian bones,disease,osteogenesis imperfecta
+disease_phenotype_negative,phenotype absent,effect/phenotype,Cardiomyopathy,disease,"ventricular tachycardia, familial"
+disease_phenotype_negative,phenotype absent,effect/phenotype,Abnormal retinal morphology,disease,cerebrooculofacioskeletal syndrome
+disease_phenotype_negative,phenotype absent,disease,arthrogryposis multiplex congenita,effect/phenotype,Abnormal circulating creatine kinase concentration
+disease_phenotype_negative,phenotype absent,disease,tooth and nail syndrome,effect/phenotype,Abnormal sweat gland morphology
+disease_phenotype_negative,phenotype absent,disease,obesity due to SIM1 deficiency,effect/phenotype,Feeding difficulties
+disease_phenotype_negative,phenotype absent,disease,congenital hypothyroidism due to maternal intake of antithyroid drugs,effect/phenotype,Congenital malformation of the left heart
+disease_phenotype_negative,phenotype absent,effect/phenotype,Abnormal respiratory system morphology,disease,transient bullous dermolysis of the newborn
+disease_phenotype_negative,phenotype absent,effect/phenotype,Abnormality of the nail,disease,spondyloepimetaphyseal dysplasia-hypotrichosis syndrome
+disease_phenotype_negative,phenotype absent,effect/phenotype,Short stature,disease,"avascular necrosis of femoral head, primary"
+disease_phenotype_negative,phenotype absent,effect/phenotype,Abnormality of the nail,disease,autosomal recessive congenital ichthyosis
+disease_phenotype_negative,phenotype absent,effect/phenotype,Abnormality of the dentition,disease,Singleton-Merten syndrome
+disease_phenotype_negative,phenotype absent,effect/phenotype,Intellectual disability,disease,velo-facial-skeletal syndrome
+disease_phenotype_positive,phenotype present,disease,tooth agenesis,effect/phenotype,Sparse eyebrow
+disease_phenotype_positive,phenotype present,disease,oculo-auriculo-vertebral spectrum,effect/phenotype,Coarctation of aorta
+disease_phenotype_positive,phenotype present,disease,muscular dystrophy-dystroglycanopathy,effect/phenotype,Cerebellar cyst
+disease_phenotype_positive,phenotype present,disease,"pituitary hormone deficiency, combined",effect/phenotype,Short stature
+disease_phenotype_positive,phenotype present,disease,congenital bilateral aplasia of vas deferens from CFTR mutation,effect/phenotype,Autosomal recessive inheritance
+disease_phenotype_positive,phenotype present,disease,legionellosis,effect/phenotype,Pancreatitis
+disease_phenotype_positive,phenotype present,disease,X-linked dyserythropoetic anemia with abnormal platelets and neutropenia,effect/phenotype,Poikilocytosis
+disease_phenotype_positive,phenotype present,effect/phenotype,Respiratory insufficiency,disease,fatal mitochondrial disease due to combined oxidative phosphorylation defect type 3
+disease_phenotype_positive,phenotype present,effect/phenotype,Anticardiolipin IgG antibody positivity,disease,Q fever
+disease_phenotype_positive,phenotype present,disease,"anhidrosis, familial generalized, with abnormal or absent sweat glands",effect/phenotype,Aplasia of the sweat glands
+disease_phenotype_positive,phenotype present,disease,dystrophic epidermolysis bullosa,effect/phenotype,Papule
+disease_phenotype_positive,phenotype present,effect/phenotype,Abnormality of the hypothalamus-pituitary axis,disease,Axenfeld-Rieger syndrome
+disease_phenotype_positive,phenotype present,disease,22q11.2 deletion syndrome,effect/phenotype,Hearing impairment
+disease_phenotype_positive,phenotype present,effect/phenotype,Developmental cataract,disease,palmoplantar keratoderma and congenital alopecia
+disease_phenotype_positive,phenotype present,disease,bilateral perisylvian polymicrogyria,effect/phenotype,Intellectual disability
+disease_phenotype_positive,phenotype present,disease,tibial muscular dystrophy,effect/phenotype,Autosomal dominant inheritance
+disease_phenotype_positive,phenotype present,disease,chromosome 2q32-q33 deletion syndrome,effect/phenotype,Micrognathia
+disease_phenotype_positive,phenotype present,effect/phenotype,Global developmental delay,disease,Baraitser-winter syndrome
+disease_phenotype_positive,phenotype present,disease,McKusick-Kaufman syndrome,effect/phenotype,Aganglionic megacolon
+disease_phenotype_positive,phenotype present,effect/phenotype,Jaundice,disease,congenital dyserythropoietic anemia
+disease_phenotype_positive,phenotype present,disease,familial lipoprotein lipase deficiency,effect/phenotype,Lactescent serum
+disease_phenotype_positive,phenotype present,disease,hamartoma (disease),effect/phenotype,Cerebral hamartoma
+disease_phenotype_positive,phenotype present,disease,"hereditary acrokeratotic poikiloderma, Weary type",effect/phenotype,Abnormal renal tubule morphology
+disease_phenotype_positive,phenotype present,effect/phenotype,Cerebral calcification,disease,neurodevelopmental disorder with alopecia and brain abnormalities
+disease_phenotype_positive,phenotype present,disease,urethral valve,effect/phenotype,Dysuria
+disease_phenotype_positive,phenotype present,effect/phenotype,Cleft palate,disease,dyssegmental dysplasia-glaucoma syndrome
+disease_phenotype_positive,phenotype present,disease,cranioectodermal dysplasia,effect/phenotype,Abnormality of dental enamel
+disease_phenotype_positive,phenotype present,disease,maculopapular cutaneous mastocytosis,effect/phenotype,Pruritus
+disease_phenotype_positive,phenotype present,effect/phenotype,Severely reduced visual acuity,disease,retinitis pigmentosa
+disease_phenotype_positive,phenotype present,effect/phenotype,Abnormality of the lymphatic system,disease,neurofibromatosis-Noonan syndrome
+protein_protein,ppi,gene/protein,UTP3,gene/protein,TF
+protein_protein,ppi,gene/protein,COPS5,gene/protein,TP53
+protein_protein,ppi,gene/protein,TP53,gene/protein,UBE2N
+protein_protein,ppi,gene/protein,TP53,gene/protein,TAF1C
+protein_protein,ppi,gene/protein,TP53,gene/protein,MYBBP1A
+protein_protein,ppi,gene/protein,ZNF302,gene/protein,TP53
+protein_protein,ppi,gene/protein,YBX1,gene/protein,TP53
+protein_protein,ppi,gene/protein,MET,gene/protein,TP53
+protein_protein,ppi,gene/protein,CABLES1,gene/protein,TP53
+protein_protein,ppi,gene/protein,CABLES2,gene/protein,TP53
+protein_protein,ppi,gene/protein,ALB,gene/protein,TK1
+protein_protein,ppi,gene/protein,SP1,gene/protein,TP53
+protein_protein,ppi,gene/protein,TP53,gene/protein,RRM2B
+protein_protein,ppi,gene/protein,WWOX,gene/protein,TP53
+protein_protein,ppi,gene/protein,TP53,gene/protein,KANSL1
+protein_protein,ppi,gene/protein,PRMT5,gene/protein,TP53
+protein_protein,ppi,gene/protein,TP53,gene/protein,PABPC1
+protein_protein,ppi,gene/protein,SRGN,gene/protein,ALB
+protein_protein,ppi,gene/protein,TF,gene/protein,DDX19B
+protein_protein,ppi,gene/protein,TP53,gene/protein,RPA1
+protein_protein,ppi,gene/protein,TP53,gene/protein,SIRT1
+protein_protein,ppi,gene/protein,TP53,gene/protein,WWOX
+protein_protein,ppi,gene/protein,RACK1,gene/protein,TP53
+protein_protein,ppi,gene/protein,TP53,gene/protein,DROSHA
+protein_protein,ppi,gene/protein,TP53,gene/protein,PRKDC
+protein_protein,ppi,gene/protein,CCN3,gene/protein,TP53
+protein_protein,ppi,gene/protein,ARNT,gene/protein,TP53
+protein_protein,ppi,gene/protein,BTK,gene/protein,TP53
+protein_protein,ppi,gene/protein,TP53,gene/protein,CAPG
+protein_protein,ppi,gene/protein,FOXO3,gene/protein,TP53
+drug_effect,side effect,effect/phenotype,Abnormality of the eye,drug,Morphine
+drug_effect,side effect,effect/phenotype,Excessive daytime somnolence,drug,Ciprofloxacin
+drug_effect,side effect,effect/phenotype,Respiratory arrest,drug,Morphine
+drug_effect,side effect,drug,Acetaminophen,effect/phenotype,Erythroderma
+drug_effect,side effect,drug,Doxorubicin,effect/phenotype,Hypokinesia
+drug_effect,side effect,drug,Morphine,effect/phenotype,Decreased pulmonary function
+drug_effect,side effect,drug,Doxorubicin,effect/phenotype,Migraine
+drug_effect,side effect,drug,Doxorubicin,effect/phenotype,Cardiomyopathy
+drug_effect,side effect,effect/phenotype,Tinnitus,drug,Doxorubicin
+drug_effect,side effect,effect/phenotype,Pallor,drug,Nicotine
+drug_effect,side effect,drug,Ciprofloxacin,effect/phenotype,Granulocytopenia
+drug_effect,side effect,drug,Acetaminophen,effect/phenotype,Hyperkinetic movements
+drug_effect,side effect,effect/phenotype,Rigidity,drug,Morphine
+drug_effect,side effect,effect/phenotype,Decreased liver function,drug,Doxorubicin
+drug_effect,side effect,effect/phenotype,Hepatic failure,drug,Doxorubicin
+drug_effect,side effect,effect/phenotype,Xerostomia,drug,Doxorubicin
+drug_effect,side effect,drug,Doxorubicin,effect/phenotype,Skin ulcer
+drug_effect,side effect,drug,Nicotine,effect/phenotype,Oral ulcer
+drug_effect,side effect,drug,Ciprofloxacin,effect/phenotype,Bradycardia
+drug_effect,side effect,drug,Doxorubicin,effect/phenotype,Abdominal pain
+drug_effect,side effect,effect/phenotype,Syncope,drug,Ciprofloxacin
+drug_effect,side effect,effect/phenotype,Abnormal joint morphology,drug,Doxorubicin
+drug_effect,side effect,effect/phenotype,Joint swelling,drug,Ciprofloxacin
+drug_effect,side effect,drug,Ciprofloxacin,effect/phenotype,Epiphora
+drug_effect,side effect,effect/phenotype,Elevated hepatic transaminase,drug,Morphine
+drug_effect,side effect,drug,Nicotine,effect/phenotype,Syncope
+drug_effect,side effect,effect/phenotype,Dysphagia,drug,Doxorubicin
+drug_effect,side effect,drug,Ciprofloxacin,effect/phenotype,Tachycardia
+drug_effect,side effect,drug,Acetaminophen,effect/phenotype,Incoordination
+drug_effect,side effect,effect/phenotype,Hyperventilation,drug,Doxorubicin
+drug_drug,synergistic interaction,drug,Ciprofloxacin,drug,Azidocillin
+drug_drug,synergistic interaction,drug,Cefradine,drug,Doxorubicin
+drug_drug,synergistic interaction,drug,Nicotine,drug,Lacosamide
+drug_drug,synergistic interaction,drug,Ciprofloxacin,drug,Technetium Tc-99m ciprofloxacin
+drug_drug,synergistic interaction,drug,Acetaminophen,drug,Flomoxef
+drug_drug,synergistic interaction,drug,Ciprofloxacin,drug,Prednisone
+drug_drug,synergistic interaction,drug,Magnesium acetate,drug,Nicotine
+drug_drug,synergistic interaction,drug,Ciprofloxacin,drug,Alendronic acid
+drug_drug,synergistic interaction,drug,Norfloxacin,drug,Ciprofloxacin
+drug_drug,synergistic interaction,drug,Morphine,drug,Phentermine
+drug_drug,synergistic interaction,drug,Ceftriaxone,drug,Acetaminophen
+drug_drug,synergistic interaction,drug,Bepridil,drug,Acetaminophen
+drug_drug,synergistic interaction,drug,Vorinostat,drug,Doxorubicin
+drug_drug,synergistic interaction,drug,Norfloxacin,drug,Acetaminophen
+drug_drug,synergistic interaction,drug,Morphine,drug,Midazolam
+drug_drug,synergistic interaction,drug,Procainamide,drug,Doxorubicin
+drug_drug,synergistic interaction,drug,Tazemetostat,drug,Morphine
+drug_drug,synergistic interaction,drug,Ciprofloxacin,drug,Edrophonium
+drug_drug,synergistic interaction,drug,Ramipril,drug,Morphine
+drug_drug,synergistic interaction,drug,Captopril,drug,Ciprofloxacin
+drug_drug,synergistic interaction,drug,Cisapride,drug,Doxorubicin
+drug_drug,synergistic interaction,drug,Morphine,drug,Atropine
+drug_drug,synergistic interaction,drug,Acetaminophen,drug,Ibutilide
+drug_drug,synergistic interaction,drug,Morphine,drug,Tianeptine
+drug_drug,synergistic interaction,drug,Doxorubicin,drug,Pantoprazole
+drug_drug,synergistic interaction,drug,Morphine,drug,Dimetacrine
+drug_drug,synergistic interaction,drug,Hydrocortisone succinate,drug,Ciprofloxacin
+drug_drug,synergistic interaction,drug,Doxorubicin,drug,Nitric Oxide
+drug_drug,synergistic interaction,drug,Acetaminophen,drug,Gadodiamide
+drug_drug,synergistic interaction,drug,Morphine,drug,Reboxetine
+drug_protein,target,drug,Norelgestromin,gene/protein,ALB
+drug_protein,target,gene/protein,ABCB1,drug,Tetrandrine
+drug_protein,target,drug,Isoniazid,gene/protein,CYP3A4
+drug_protein,target,gene/protein,TP53,drug,"Zinc sulfate, unspecified form"
+drug_protein,target,drug,Miltefosine,gene/protein,ABCB1
+drug_protein,target,gene/protein,ABCB1,drug,ATP
+drug_protein,target,drug,Morphine,gene/protein,OPRM1
+drug_protein,target,gene/protein,RDH11,drug,Vitamin A
+drug_protein,target,drug,Iron,gene/protein,TF
+drug_protein,target,gene/protein,TP53,drug,1-(9-ethyl-9H-carbazol-3-yl)-N-methylmethanamine
+drug_protein,target,gene/protein,ALB,drug,Aniline
+drug_protein,target,gene/protein,PTGES3,drug,Acetaminophen
+drug_protein,target,gene/protein,APOD,drug,Vitamin A
+drug_protein,target,gene/protein,TF,drug,Aluminum acetate
+drug_protein,target,drug,Ferrous gluconate,gene/protein,TF
+drug_protein,target,drug,Reversin 121,gene/protein,ABCB1
+drug_protein,target,gene/protein,ABCB1,drug,Miltefosine
+drug_protein,target,drug,Ferrous fumarate,gene/protein,TF
+drug_protein,target,gene/protein,ABCB1,drug,Concanamycin A
+drug_protein,target,drug,Zinc chloride,gene/protein,TP53
+drug_protein,target,drug,Vitamin A,gene/protein,DHRS3
+drug_protein,target,drug,Elacridar,gene/protein,ABCB1
+drug_protein,target,gene/protein,CHRNA2,drug,Nicotine
+drug_protein,target,gene/protein,CHRNA10,drug,Nicotine
+drug_protein,target,gene/protein,PTGS2,drug,Acetaminophen
+drug_protein,target,gene/protein,RDH5,drug,Vitamin A
+drug_protein,target,drug,Nicotine,gene/protein,CHAT
+drug_protein,target,gene/protein,TF,drug,Aluminium phosphate
+drug_protein,target,drug,Ferrous succinate,gene/protein,TF
+drug_protein,target,gene/protein,ABCB1,drug,Dofequidar
+drug_protein,transporter,drug,Atorvastatin,gene/protein,ABCB1
+drug_protein,transporter,gene/protein,ABCB1,drug,Isavuconazole
+drug_protein,transporter,gene/protein,ABCB1,drug,Pantoprazole
+drug_protein,transporter,drug,Bicalutamide,gene/protein,ABCB1
+drug_protein,transporter,drug,Tolvaptan,gene/protein,ABCB1
+drug_protein,transporter,gene/protein,ABCB1,drug,Dexamethasone acetate
+drug_protein,transporter,gene/protein,ABCB1,drug,Vismodegib
+drug_protein,transporter,drug,Avatrombopag,gene/protein,ABCB1
+drug_protein,transporter,gene/protein,ABCB1,drug,Indacaterol
+drug_protein,transporter,drug,Digitoxin,gene/protein,ABCB1
+drug_protein,transporter,drug,Budesonide,gene/protein,ABCB1
+drug_protein,transporter,gene/protein,ABCB1,drug,Dactinomycin
+drug_protein,transporter,drug,Betamethasone,gene/protein,ABCB1
+drug_protein,transporter,gene/protein,ABCB1,drug,Imatinib
+drug_protein,transporter,gene/protein,ABCB1,drug,Ranolazine
+drug_protein,transporter,gene/protein,ABCB1,drug,Budesonide
+drug_protein,transporter,gene/protein,ABCB1,drug,Propofol
+drug_protein,transporter,gene/protein,ABCB1,drug,Zidovudine
+drug_protein,transporter,drug,Topiramate,gene/protein,ABCB1
+drug_protein,transporter,gene/protein,ABCB1,drug,Clomifene
+drug_protein,transporter,drug,Toremifene,gene/protein,ABCB1
+drug_protein,transporter,drug,Hydrocortisone acetate,gene/protein,ABCB1
+drug_protein,transporter,drug,Estriol,gene/protein,ABCB1
+drug_protein,transporter,drug,Doxazosin,gene/protein,ABCB1
+drug_protein,transporter,gene/protein,ABCB1,drug,Avapritinib
+drug_protein,transporter,drug,Atazanavir,gene/protein,ABCB1
+drug_protein,transporter,drug,Topotecan,gene/protein,ABCB1
+drug_protein,transporter,gene/protein,ABCB1,drug,Paclitaxel
+drug_protein,transporter,gene/protein,ABCB1,drug,Sunitinib
+drug_protein,transporter,drug,Nadolol,gene/protein,ABCB1
