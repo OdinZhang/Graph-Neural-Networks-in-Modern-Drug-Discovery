@@ -11,20 +11,12 @@ if [[ ! -d "${PROJECT_ROOT}/source_repos/rxnmapper" || ! -d "${PROJECT_ROOT}/sou
   exit 1
 fi
 
-if command -v python3.12 >/dev/null 2>&1; then
-  PYTHON_BIN="$(command -v python3.12)"
-elif command -v python3 >/dev/null 2>&1; then
-  PYTHON_BIN="$(command -v python3)"
-else
-  echo "未找到 python3.12 或 python3。" >&2
-  exit 1
-fi
+echo "[1/5] 创建 conda 虚拟环境: ${ENV_DIR}"
 
-if [[ ! -x "${ENV_DIR}/bin/python" ]]; then
-  echo "[1/5] 创建虚拟环境: ${ENV_DIR}"
-  "${PYTHON_BIN}" -m venv "${ENV_DIR}"
+if conda env list | grep -q "reaction_template_tutorial_envs"; then
+  echo "    复用已有 conda 环境: reaction_template_tutorial_envs"
 else
-  echo "[1/5] 复用已有虚拟环境: ${ENV_DIR}"
+  conda create -y -p "${ENV_DIR}" python=3.12
 fi
 
 echo "[2/5] 升级 pip / wheel，并固定 setuptools<81"

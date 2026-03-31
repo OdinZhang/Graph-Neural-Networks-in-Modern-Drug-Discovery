@@ -1,0 +1,23 @@
+name: yieldmpnn_tutorial_envs
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - numpy=2.2
+  - pandas=2.3
+  - scipy=1.15
+  - scikit-learn=1.7
+  - rdkit=2025.09.6
+  - jupyterlab
+  - ipykernel
+  - matplotlib
+  - seaborn
+  - pip
+  - pip:
+      - --extra-index-url https://download.pytorch.org/whl/cpu
+      - --find-links https://data.dgl.ai/wheels/torch-2.6/repo.html
+      - torch==2.6.0
+      - torchvision==0.21.0
+      - torchaudio==2.6.0
+      - dgl==2.5.0

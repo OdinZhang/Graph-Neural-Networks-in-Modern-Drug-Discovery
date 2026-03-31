@@ -40,3 +40,5 @@ CLAUDE.md
 *.db
 task.md
 teaching_demos/2.single_step_retro_tutorial/2.1.template_based/2.1.1.gln/good_reference_gln.md
+book_scripts
+sync_to_chapter7.sh
