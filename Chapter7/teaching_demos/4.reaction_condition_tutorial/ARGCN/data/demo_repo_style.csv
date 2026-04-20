@@ -1,0 +1,4 @@
+id;Yield;Reactant1;Reactant2;Product;M;L;B;S;A
+rxn_001;0.82;Brc1ccccc1;OB(O)c1ccccc1;c1ccc(-c2ccccc2)cc1;[0];[28];[51];[86];[96]
+rxn_002;0.74;COc1ccc(Br)cc1;OB(O)c1ccncc1;COc1ccc(-c2ccncc2)cc1;[1];[30];[53];[87, 94];[97]
+rxn_003;0.67;Brc1ccccn1;Cc1ccc(B(O)O)cc1;Cc1ccc(-c2ccccn2)cc1;[2];[36];[54];[89, 94];[]

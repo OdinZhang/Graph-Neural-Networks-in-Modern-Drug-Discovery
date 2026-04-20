@@ -1,0 +1,4 @@
+reaction_id,reaction_smiles,yield,metal,ligand,base,solvent,additive
+rxn_001,Brc1ccccc1.OB(O)c1ccccc1>>c1ccc(-c2ccccc2)cc1,0.82,tetrakis(triphenylphosphine) palladium(0),triphenylphosphine,potassium carbonate,tetrahydrofuran,tetrabutylammomium bromide
+rxn_002,Brc1ccc(OC)cc1.OB(O)c1ccncc1>>COc1ccc(-c2ccncc2)cc1,0.74,palladium diacetate,XPhos,potassium phosphate,"ethanol|water",water
+rxn_003,Brc1ccccn1.Cc1ccc(B(O)O)cc1>>Cc1ccc(-c2ccccn2)cc1,0.67,"(1,1'-bis(diphenylphosphino)ferrocene)palladium(II) dichloride","1,1'-bis-(diphenylphosphino)ferrocene",caesium carbonate,"1,4-dioxane|water",

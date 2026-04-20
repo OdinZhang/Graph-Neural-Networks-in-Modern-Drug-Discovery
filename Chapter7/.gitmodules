@@ -37,3 +37,11 @@
 [submodule "source_repos/torchdrug"]
 	path = source_repos/torchdrug
 	url = https://github.com/DeepGraphLearning/torchdrug.git
+
+[submodule "source_repos/reaction-gcnn"]
+	path = source_repos/reaction-gcnn
+	url = https://github.com/slryou41/reaction-gcnn.git
+
+[submodule "source_repos/reaction_yield_nn"]
+	path = source_repos/reaction_yield_nn
+	url = https://github.com/seokhokang/reaction_yield_nn.git

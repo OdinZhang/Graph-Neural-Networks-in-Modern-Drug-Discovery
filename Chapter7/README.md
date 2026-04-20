@@ -17,6 +17,22 @@ cd Chemical_Synthesis
 git submodule update --init --recursive
 ```
 
+如果你需要把当前仓库一键同步到书仓库 Graph-Neural-Networks-in-Modern-Drug-Discovery 的 Chapter7，可以先预演：
+
+```bash
+bash sync_to_chapter7.sh
+```
+
+确认输出无误后再正式执行：
+
+```bash
+bash sync_to_chapter7.sh --apply
+```
+
+这个脚本只保留在当前 Chemical_Synthesis 源仓库中，不会被同步到 Chapter7。
+
+脚本会同步普通文件，并对齐 Chapter7/source_repos 下各子模块的提交；如果源仓库某个子模块里还有未提交改动，脚本会给出警告并同步工作区文件，但这类改动仍需要在对应子模块中单独提交，才能被版本化保存。
+
 然后进入 `teaching_demos/`，选择你想实践的教程目录。
 
 当前已经整理好的示例：

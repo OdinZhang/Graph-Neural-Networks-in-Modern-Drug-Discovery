@@ -28,6 +28,12 @@
 [submodule "Chapter7/source_repos/torchdrug"]
 	path = Chapter7/source_repos/torchdrug
 	url = https://github.com/DeepGraphLearning/torchdrug.git
+[submodule "Chapter7/source_repos/reaction-gcnn"]
+	path = Chapter7/source_repos/reaction-gcnn
+	url = https://github.com/slryou41/reaction-gcnn.git
+[submodule "Chapter7/source_repos/reaction_yield_nn"]
+	path = Chapter7/source_repos/reaction_yield_nn
+	url = https://github.com/seokhokang/reaction_yield_nn.git
 [submodule "Chapter3/source_repos/InteractionGraphNet"]
 	path = Chapter3/source_repos/InteractionGraphNet
 	url = https://github.com/zjujdj/InteractionGraphNet.git
