@@ -9,11 +9,12 @@
 ```
 kg-chapter6/
 ├── 6_1/   知识图谱构建与可视化案例（Jupyter Notebook）
-├── 6_2/   药物重定位应用（三个子案例 + 药物协同）
-│   ├── drug repositioning/dda/HINGRL/     药物-疾病关联预测
-│   ├── drug repositioning/dti/iGRLDTI/   药物-靶点相互作用预测
+├── 6_2/   药物重定位应用（三个子案例 + 药物协同 + Notebook 构建脚本）
+│   ├── drug repositioning/dda/HINGRL/            药物-疾病关联预测
+│   ├── drug repositioning/dti/iGRLDTI/           药物-靶点相互作用预测
 │   ├── drug repositioning/interpretability/TxGNN/  零样本可解释预测
-│   └── drug synergy/                      药物组合协同效应预测
+│   ├── drug synergy/                             药物组合协同效应预测
+│   └── notebooks/                                教学 Notebook 生成与整理脚本
 └── 6_3/   TREE：基于 Transformer 的癌症基因识别
     └── TREE/
 ```
@@ -52,45 +53,67 @@ jupyter notebook 6_1/知识图谱构建案例.ipynb
 
 **路径**：`6_2/drug repositioning/dda/HINGRL/`
 
-**核心思路**：构建包含药物、疾病、蛋白质三类节点的异构信息网络（HIN），利用 DeepWalk 生成节点嵌入，拼接节点属性特征后用随机森林进行药物-疾病关联的二分类预测。
+**定位**：当前目录已整理为课堂教学版，主入口为 `HINGRL_demo.ipynb`。
+
+**核心思路**：构建包含药物、疾病、蛋白质三类节点的异构网络，利用节点属性特征与 DeepWalk 图嵌入共同表示药物-疾病样本，再通过监督学习完成关联预测。
 
 ```
 多源生物数据 → 构建异构信息网络(HIN) → DeepWalk 节点嵌入 → 随机森林分类 → AUC 评估
 ```
 
-**环境安装**
+**目录结构**
+
+```text
+HINGRL/
+├─ data/
+│  ├─ B-Dataset/
+│  └─ F-Dataset/
+├─ demo_outputs/
+│  └─ hingrl_b_dataset_metrics.png
+├─ HINGRL_demo.ipynb
+└─ README.md
+```
+
+**主要文件**
+
+| 文件 | 说明 |
+|------|------|
+| `HINGRL_demo.ipynb` | 课堂教学版 Notebook，主体展示 `B-Dataset`，并预留 `F-Dataset` 课后练习 |
+| `data/B-Dataset/` | 课堂主线使用的数据集 |
+| `data/F-Dataset/` | 迁移练习数据集 |
+| `demo_outputs/hingrl_b_dataset_metrics.png` | Notebook 生成的课堂结果图 |
+
+**数据说明**
+
+| 文件 | 说明 |
+|------|------|
+| `DrDiNum.csv` | 药物-疾病关联 |
+| `DrPrNum.csv` | 药物-蛋白关联 |
+| `DiPrNum.csv` | 疾病-蛋白关联 |
+| `AllNodeAttribute.csv` | 节点属性特征 |
+| `AllEmbedding_DeepWalk.txt` | 预计算 DeepWalk 嵌入 |
+
+样本特征拼接形式为：
+
+```text
+[attr(drug) | emb(drug) | attr(disease) | emb(disease)]
+```
+
+`data/README.md` 进一步说明了当前仓库只版本化数据契约与已准备好的嵌入文件，默认不重新运行 OpenNE。
+
+**环境依赖**
 
 ```bash
 pip install numpy pandas scipy scikit-learn matplotlib
-# Python >= 3.7
 ```
 
-**快速运行**
+**推荐运行方式**
 
 ```bash
-# B-Dataset，5 折交叉验证，100 棵决策树
-python run_demo.py -d 1 -f 5 -n 100
-
-# F-Dataset
-python run_demo.py -d 2 -f 5 -n 100
+jupyter notebook 6_2/drug repositioning/dda/HINGRL/HINGRL_demo.ipynb
 ```
 
-**参数说明**
-
-| 参数 | 含义 | 默认值 |
-|------|------|--------|
-| `-d` | 数据集（1=B-Dataset, 2=F-Dataset） | 1 |
-| `-f` | K 折交叉验证折数 | 5 |
-| `-n` | 随机森林决策树棵数 | 100 |
-
-**预期结果**：B-Dataset 上平均 AUC ≈ 0.95+，ROC 曲线保存至 `data/tmp/roc_B-Dataset_5fold.png`
-
-**数据集规模**
-
-| 数据集 | 药物数 | 疾病数 | 正样本数 |
-|--------|--------|--------|---------|
-| B-Dataset（`-d 1`） | ~269 | ~598 | ~18,416 |
-| F-Dataset（`-d 2`） | ~593 | ~313 | ~1,933 |
+**教学建议**：课堂以 `B-Dataset` 为主，`F-Dataset` 更适合作为课后独立迁移练习。
 
 ---
 
@@ -98,43 +121,69 @@ python run_demo.py -d 2 -f 5 -n 100
 
 **路径**：`6_2/drug repositioning/dti/iGRLDTI/`
 
-**核心思路**：将药物与靶点蛋白构建为异质生物信息网络，通过**非线性扩散局部平滑（NDLS）**为每个节点自适应确定最优传播跳数，获取节点嵌入后用梯度提升树（GBM）预测药物-靶点相互作用（DTI）。
+**定位**：当前目录已整理为课堂教学版，主入口为 `iGRLDTI_demo.ipynb`。
+
+**核心思路**：将药物与靶点构造成异质生物信息网络，通过 NDLS-F 缓解图传播中的过平滑问题，再由节点嵌入构造药物-靶点样本完成预测。
 
 ```
 原始图数据 → 构建增广随机游走归一化邻接矩阵 → NDLS 特征平滑 → DNN 投影 → GBM 10折交叉验证 → AUC/AUPRC
 ```
 
-**环境安装**
+**目录结构**
 
-```bash
-pip install torch numpy pandas scipy scikit-learn matplotlib
-# Python >= 3.6, PyTorch >= 1.4
+```text
+iGRLDTI/
+├─ data/
+│  ├─ Allnode_DrPr.csv
+│  ├─ DrPrNum_DrPr.csv
+│  ├─ AllNodeAttribute_DrPr.csv
+│  ├─ AllNegative_DrPr.csv
+│  └─ Emdebding_GCN2_DrPr.csv
+├─ results/
+│  └─ roc_curve.png
+├─ src/
+│  ├─ main.py
+│  ├─ model.py
+│  ├─ train.py
+│  └─ utils.py
+├─ iGRLDTI_demo.ipynb
+└─ README.md
 ```
 
-**快速运行**
+**主要文件**
 
-```bash
-# 在 iGRLDTI/ 目录下
-python run_demo.py
-```
+| 文件 | 说明 |
+|------|------|
+| `iGRLDTI_demo.ipynb` | 课堂教学版 Notebook |
+| `src/utils.py` | 图预处理与数据加载工具 |
+| `src/train.py` | NDLS-F 与训练辅助函数 |
+| `src/model.py` | DNN 投影模型定义 |
+| `results/roc_curve.png` | 运行后的 ROC 曲线图 |
 
 **数据说明**
 
-| 文件 | 说明 | 规模 |
-|------|------|------|
-| `Allnode_DrPr.csv` | 节点索引（0=药物, 1=蛋白质） | 973 节点 |
-| `DrPrNum_DrPr.csv` | 正样本：已知 DTI 边 | 1,923 条 |
-| `AllNodeAttribute_DrPr.csv` | 节点特征向量 | 973 × 64 |
-| `AllNegative_DrPr.csv` | 负样本候选池 | 230,853 条 |
+| 文件 | 说明 |
+|------|------|
+| `Allnode_DrPr.csv` | 节点列表 |
+| `DrPrNum_DrPr.csv` | 已知药物-靶点相互作用边 |
+| `AllNodeAttribute_DrPr.csv` | 节点属性特征 |
+| `AllNegative_DrPr.csv` | 候选负样本池 |
 
-**关键参数**
+课堂讲解可以重点强调：正样本来自已知 DTI 边，负样本来自未知配对随机采样，最终样本特征由药物嵌入与靶点嵌入拼接得到。
 
-| 参数 | 默认值 | 含义 |
-|------|--------|------|
-| `k1` | 200 | NDLS 最大传播跳数 |
-| `epsilon1` | 0.03 | NDLS 收敛阈值 |
-| `hidden` | 64 | DNN 嵌入维度 |
-| `N_ESTIMATORS` | 499 | GBM 弱学习器数量 |
+**环境依赖**
+
+```bash
+pip install torch numpy pandas scipy scikit-learn matplotlib
+```
+
+**推荐运行方式**
+
+```bash
+jupyter notebook 6_2/drug repositioning/dti/iGRLDTI/iGRLDTI_demo.ipynb
+```
+
+**教学建议**：建议把重点放在 NDLS-F 如何缓解过平滑、为什么同时关注 `AUC` 与 `AUPRC`，以及 5 折与 10 折结果差异上。
 
 ---
 
@@ -142,29 +191,46 @@ python run_demo.py
 
 **路径**：`6_2/drug repositioning/interpretability/TxGNN/`
 
-**核心思路**：基于包含 17,080 种疾病、7,957 种药物的大规模生物医学知识图谱，利用图神经网络预训练 + 度量学习微调，实现对罕见病（训练集中无已知治疗药物）的**零样本药物重定向预测**，并通过 GraphMask 提供可解释性分析。
+**定位**：该目录提供 TxGNN 的教学版仓库，主入口为 `TxGNN_Demo.ipynb`，并保留 `reproduce/` 目录用于论文结果复现。
+
+**核心思路**：基于大规模生物医学知识图谱，利用 GNN 预训练与度量学习微调，实现对训练集中无已知治疗药物疾病的零样本药物重定向预测，并通过 GraphMask 进行可解释性分析。
 
 ```
 知识图谱 → GNN 预训练（30种关系）→ 度量学习微调（相似疾病辅助）→ 零样本推断
 ```
 
+**项目结构**
+
+```text
+TxGNN/
+├── TxGNN/                  # 核心模块
+├── data/
+│   └── disease_files/      # 九大疾病领域节点列表
+├── reproduce/              # 论文复现脚本
+├── fig/
+├── TxGNN_Demo.ipynb
+├── requirements.txt
+├── setup.py
+└── README.md
+```
+
 **环境安装**
 
 ```bash
-# Step 1：创建 Conda 环境
 conda create --name txgnn_env python=3.8
 conda activate txgnn_env
 
-# Step 2：安装 PyTorch（根据 CUDA 版本选择）
 conda install pytorch==1.12.1 torchvision torchaudio cudatoolkit=11.3 -c pytorch
-# 无 GPU：conda install pytorch==1.12.1 torchvision torchaudio cpuonly -c pytorch
-
-# Step 3：安装 DGL（版本必须为 0.5.2）
 conda install -c dglteam dgl-cuda11.3==0.5.2
-# 无 GPU：conda install -c dglteam dgl==0.5.2
-
-# Step 4：安装 TxGNN
 pip install -e .
+```
+
+无 GPU 时，可分别改用 `cpuonly` 的 PyTorch 与 `dgl==0.5.2`。
+
+**推荐运行方式**
+
+```bash
+jupyter notebook 6_2/drug repositioning/interpretability/TxGNN/TxGNN_Demo.ipynb
 ```
 
 **核心工作流**
@@ -172,12 +238,12 @@ pip install -e .
 ```python
 from txgnn import TxData, TxGNN, TxEval
 
-# 1. 加载数据（首次运行自动下载 ~400MB）
+# 1. 加载数据（首次运行自动下载约 400MB）
 TxData = TxData(data_folder_path='./data')
 TxData.prepare_split(split='complex_disease', seed=42)
 
 # 2. 初始化模型
-TxGNN = TxGNN(data=TxData, device='cpu')  # 无 GPU 改为 'cpu'
+TxGNN = TxGNN(data=TxData, device='cpu')
 TxGNN.model_initialize(n_hid=100, n_inp=100, n_out=100, proto=True, proto_num=3)
 
 # 3. 加载预训练权重（教学演示推荐）
@@ -195,7 +261,15 @@ TxGNN.train_graphmask(relation='indication', learning_rate=3e-4)
 gates = TxGNN.retrieve_save_gates('./model_ckpt')
 ```
 
-**完整演示**：打开 `TxGNN_Demo.ipynb`
+**补充说明**
+
+| 目录/文件 | 说明 |
+|----------|------|
+| `TxGNN_Demo.ipynb` | 课堂演示主入口 |
+| `reproduce/run_txgnn.sh`、`reproduce/train.py` | 论文复现实验脚本 |
+| `reproduce/result_more_metrics.csv` | 复现实验原始指标 |
+
+`reproduce/README.md` 中还给出了论文 checkpoint 下载地址，可通过 `TxGNN.load_pretrained` 直接载入评估。
 
 **数据集划分策略**
 
@@ -211,41 +285,55 @@ gates = TxGNN.retrieve_save_gates('./model_ckpt')
 
 **路径**：`6_2/drug synergy/`
 
-**核心思路**：将药物与细胞系建模为异质图节点，通过三阶段图神经网络（特征映射 → 消息传递 → 子图读出）预测药物组合的协同效应（Synergy Loewe 分数）。
+**定位**：当前目录已整理为课堂教学版，主入口为 `drug_synergy_demo.ipynb`。
+
+**核心思路**：将药物与细胞系建模为异质图节点，通过异构 GraphSAGE 学习 `[drugA, drugB, cell]` 的联合表示，完成协同效应回归预测。
 
 ```
 药物特征（1024D 分子指纹）+ 细胞系特征（基因表达谱）→ 异质图 → SAGEConv 消息传递 → MLP 回归
 ```
 
-**环境安装**
+**目录结构**
 
-```bash
-# 创建环境
-conda create -n synergy_gnn python=3.10
-conda activate synergy_gnn
-
-# 安装 PyTorch（以 CUDA 12.1 为例）
-conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia
-
-# 安装 PyTorch Geometric
-pip install torch_geometric pandas
+```text
+drug synergy/
+├─ data/
+│  ├─ demo_synergy_labels.csv
+│  ├─ demo_drug_features.csv
+│  ├─ demo_cell_features.csv
+│  ├─ macro_hetero_graph.pt
+│  ├─ macro_hetero_model.pth
+│  └─ test_predictions.csv
+├─ results/
+│  ├─ loss_curve.png
+│  └─ prediction_scatter.png
+├─ drug_synergy_demo.ipynb
+└─ README.md
 ```
 
-**快速运行**
+**环境依赖**
 
 ```bash
-python run_demo.py
+pip install torch torch_geometric pandas matplotlib
 ```
 
-脚本自动完成：加载 CSV → 构建 PyG 异质图 → 8:2 划分训练/测试集 → 训练 → 保存权重与预测结果至 `data/` 目录。
+**推荐运行方式**
 
-**数据文件**
+```bash
+jupyter notebook "6_2/drug synergy/drug_synergy_demo.ipynb"
+```
+
+**主要文件**
 
 | 文件 | 说明 |
 |------|------|
-| `data/demo_synergy_labels.csv` | 交互标签（FLOBAK 子集） |
-| `data/demo_drug_features.csv` | 药物特征（1024D 分子指纹） |
+| `data/demo_synergy_labels.csv` | 药物组合在不同细胞系上的协同分数标签 |
+| `data/demo_drug_features.csv` | 药物分子特征 |
 | `data/demo_cell_features.csv` | 细胞系特征（基因表达谱） |
+| `results/loss_curve.png` | 训练曲线 |
+| `results/prediction_scatter.png` | 测试集预测散点图 |
+
+**教学建议**：这是一个回归任务，不应再以 `AUC` 为主，而应围绕 `MSE`、`MAE`、`RMSE` 和相关性解释模型效果。
 
 ---
 
@@ -324,14 +412,11 @@ python run.py
 | 小节 | 案例 | 任务类型 | 核心模型 | 运行入口 |
 |------|------|----------|----------|----------|
 | 6_1 | 知识图谱构建 | 图构建与可视化 | NetworkX | `知识图谱构建案例.ipynb` |
-| 6_2 | HINGRL | 药物-疾病关联预测 | DeepWalk + 随机森林 | `run_demo.py -d 1` |
-| 6_2 | iGRLDTI | 药物-靶点相互作用预测 | NDLS + GBM | `run_demo.py` |
+| 6_2 | HINGRL | 药物-疾病关联预测 | DeepWalk + 属性特征 + 随机森林 | `HINGRL_demo.ipynb` |
+| 6_2 | iGRLDTI | 药物-靶点相互作用预测 | NDLS-F + DNN + GBM | `iGRLDTI_demo.ipynb` |
 | 6_2 | TxGNN | 零样本药物重定向 | GNN + 度量学习 | `TxGNN_Demo.ipynb` |
-| 6_2 | Macro GNN | 药物协同效应预测 | SAGEConv 异质图 | `run_demo.py` |
+| 6_2 | Macro GNN | 药物协同效应预测 | 异构 GraphSAGE + MLP 回归 | `drug_synergy_demo.ipynb` |
 | 6_3 | TREE | 癌症基因识别 | Graphormer + SHAP | `run_demo.py` |
-
-
-| … | （持续更新中） | — | — | — |
 
 ---
 
@@ -350,9 +435,8 @@ python run.py
 
 ## 参考文献
 
-- **PrimeKG**：Chandak, et al. (2022). *Scientific Data*.
-- **HINGRL**：Zhao B W, et al. (2022). *Briefings in Bioinformatics*.
-- **iGRLDTI**：Zhao B W, et al. (2022).*Bioinformatics*.
-- **TxGNN**：Huang K, et al. (2023). *Nature Medicine*.
+- **HINGRL**：Zhao B W, et al. (2022). *Briefings in Bioinformatics*, 23(4).
+- **iGRLDTI**：*Bioinformatics*, 2023.
+- **TxGNN**：Huang K, et al. (2023). *medRxiv*. doi:10.1101/2023.03.19.23287458
 - **TREE**：Su X, et al. (2025). *Nature Biomedical Engineering*.
 - **DeepWalk**：Perozzi B, et al. (2014). *KDD 2014*.
