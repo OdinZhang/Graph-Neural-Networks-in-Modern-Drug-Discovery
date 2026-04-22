@@ -436,7 +436,7 @@ python run.py
 ## 参考文献
 
 - **HINGRL**：Zhao B W, et al. (2022). *Briefings in Bioinformatics*.
-- **iGRLDTI**：Zhao B W, et al. (2023).*Bioinformatics*.
+- **iGRLDTI**：Zhao B W, et al. (2023). *Bioinformatics*.
 - **TxGNN**：Huang K, et al. (2023). *Nature Medicine*.
 - **TREE**：Su X, et al. (2025). *Nature Biomedical Engineering*.
 - **DeepWalk**：Perozzi B, et al. (2014). *KDD 2014*.
