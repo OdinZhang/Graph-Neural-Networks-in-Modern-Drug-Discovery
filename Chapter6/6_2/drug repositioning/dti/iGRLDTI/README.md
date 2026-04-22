@@ -1,192 +1,159 @@
-# iGRLDTI — 基于图表示学习的药物-靶点相互作用预测
+# iGRLDTI 案例说明
 
-> 教学案例 | 第6章 · 知识图谱与药物重定位
+本目录对应药物重定位中的药物-靶点相互作用预测案例，核心方法为 **iGRLDTI**  
+论文名称：*An Improved Graph Representation Learning Method for Predicting Drug-Target Interactions over Heterogeneous Biological Information Network*
 
-## 1. 案例背景
+该案例已经整理为两种使用方式：
 
-**药物重定位（Drug Repositioning）** 是指为已上市或已在研发中的药物寻找新的适应症，
-相比从头研发新药可显著缩短研发周期和降低成本。
-
-本案例基于论文：
-> *iGRLDTI: An Improved Graph Representation Learning Method for Predicting Drug-Target Interactions over Heterogeneous Biological Information Network*
-
-核心思想：将药物与靶点蛋白的异质生物信息网络建模为图，通过图上的 **非线性扩散局部平滑（NDLS）** 获取节点嵌入，再用机器学习分类器预测未知的药物-靶点相互作用（DTI）。
+1. `iGRLDTI_demo.ipynb`
+   适合课堂教学、逐步展示和板书讲解。
 
 ---
 
-## 2. 算法流程
+## 1. 案例目标
 
-```
-原始图数据（节点特征 + 边列表）
-        │
-        ▼
-  [图预处理] 构建增广随机游走归一化邻接矩阵 Â
-        │
-        ▼
-  [NDLS-F] 非线性扩散局部平滑
-    ├─ 逐跳传播特征：X^(k) = Â · X^(k-1)
-    ├─ 计算稳态特征：X_∞ = π^T · X
-    └─ 为每个节点确定最优跳数 h_v（收敛阈值 ε₁）
-        │
-        ▼
-  [DNN 投影] 将平滑特征映射到低维嵌入空间
-        │
-        ▼
-  [样本构建] 药物-靶点嵌入拼接 → 正样本(已知DTI) + 负样本(随机采样)
-        │
-        ▼
-  [GBM 分类] 梯度提升树 10折交叉验证
-        │
-        ▼
-  评估指标：AUC / AUPRC
-```
+iGRLDTI 的核心任务是预测潜在的药物-靶点相互作用（DTI）。
+
+在这个案例中，主要包含三层思路：
+
+- 把药物和靶点构造成异质生物信息网络
+- 用 NDLS-F 缓解图传播中的过平滑问题
+- 用节点嵌入构造药物-靶点样本，并通过分类器完成预测
 
 ---
 
-## 3. 项目结构
+## 2. 目录结构
 
-```
+```text
 iGRLDTI/
-├── run_demo.py              # 主运行脚本（教学版，含详细注释）
-├── data/
-│   ├── Allnode_DrPr.csv          # 节点列表（药物549个 + 蛋白质424个）
-│   ├── DrPrNum_DrPr.csv          # 正样本边列表（已知DTI，1923条）
-│   ├── AllNodeAttribute_DrPr.csv # 节点特征矩阵（973 × 64）
-│   ├── AllNegative_DrPr.csv      # 负样本候选池（230853条未知交互对）
-│   └── Emdebding_GCN2_DrPr.csv   # 预计算好的节点嵌入（可选）
-├── src/
-│   ├── main.py    # 原始实验脚本
-│   ├── model.py   # DNN 模型定义
-│   ├── train.py   # NDLS 工具函数（aver / propagate / cal_hops）
-│   └── utils.py   # 数据加载与图处理工具
-└── results/
-    └── roc_curve.png   # 运行后自动生成的 ROC 曲线图
+├─ data/
+│  ├─ Allnode_DrPr.csv
+│  ├─ DrPrNum_DrPr.csv
+│  ├─ AllNodeAttribute_DrPr.csv
+│  ├─ AllNegative_DrPr.csv
+│  └─ Emdebding_GCN2_DrPr.csv
+├─ results/
+│  └─ roc_curve.png
+├─ src/
+│  ├─ main.py
+│  ├─ model.py
+│  ├─ train.py
+│  └─ utils.py
+├─ iGRLDTI_demo.ipynb
+└─ README.md
 ```
+
+主要文件说明：
+
+- `iGRLDTI_demo.ipynb`
+  课堂教学版 Notebook，适合逐节讲解。
+- `src/utils.py`
+  图预处理和数据加载工具。
+- `src/train.py`
+  NDLS-F 与相关训练辅助函数。
+- `src/model.py`
+  DNN 投影模型定义。
+- `results/roc_curve.png`
+  运行后生成的 ROC 曲线图。
 
 ---
 
-## 4. 数据说明
+## 3. 数据说明
 
-| 文件 | 说明 | 规模 |
-|---|---|---|
-| `Allnode_DrPr.csv` | 节点索引与类型（0=药物, 1=蛋白质） | 973 节点 |
-| `DrPrNum_DrPr.csv` | 正样本：已知药物-靶点相互作用边 | 1,923 条 |
-| `AllNodeAttribute_DrPr.csv` | 节点特征向量（化学/生物属性） | 973 × 64 |
-| `AllNegative_DrPr.csv` | 负样本候选：尚未报道的药物-靶点对 | 230,853 条 |
+图中包含两类节点：
 
-**节点编号约定：**
-- 节点 0 ~ 548：药物（549 个）
-- 节点 549 ~ 972：靶点蛋白质（424 个）
+- 药物节点
+- 蛋白质节点
+
+主要数据文件：
+
+- `Allnode_DrPr.csv`
+  节点列表
+- `DrPrNum_DrPr.csv`
+  已知药物-靶点相互作用边
+- `AllNodeAttribute_DrPr.csv`
+  节点属性特征
+- `AllNegative_DrPr.csv`
+  候选负样本池
+
+课堂上可以重点强调：
+
+1. 正样本来自已知 DTI 边
+2. 负样本来自未知配对中的随机采样
+3. 最终样本特征由药物嵌入和靶点嵌入拼接得到
 
 ---
 
-## 5. 快速开始
+## 4. 方法流程
 
-### 环境要求
+`iGRLDTI_demo.ipynb`：
 
-```
-Python  >= 3.6
-PyTorch >= 1.4
-scikit-learn
-numpy
-pandas
-scipy
-matplotlib   # 可选，用于 ROC 曲线可视化
-```
+1. 数据加载
+2. 图预处理
+3. NDLS-F 特征平滑
+4. DNN 节点嵌入提取
+5. 正负样本构造
+6. 10 折分层交叉验证
+7. AUC / AUPRC 评估与 ROC 可视化
 
-### 安装依赖
+其中最有教学价值的部分通常是：
+
+- NDLS-F 为什么能缓解过平滑
+- 样本是怎样从节点嵌入转换成药物-靶点对的
+- 为什么要同时看 `AUC` 和 `AUPRC`
+
+---
+
+## 5. 运行方式
+
+### 5.1 Notebook 运行
+
+推荐直接打开：
+
+- `iGRLDTI_demo.ipynb`
+
+该 Notebook 已整理成课堂版结构，包括：
+
+1. 教学目标
+2. 方法准备
+3. 数据与任务认识
+4. NDLS-F 与节点嵌入
+5. 样本构造与交叉验证
+6. 模型结果与指标解释
+7. 可视化结果解读
+8. 课堂总结
+9. 课后作业
+
+---
+
+## 6. 环境依赖
+
+建议至少安装以下依赖：
 
 ```bash
 pip install torch numpy pandas scipy scikit-learn matplotlib
 ```
 
-### 运行演示
-
-```bash
-# 在项目根目录（iGRLDTI/）下运行
-python run_demo.py
-```
-
-### 预期输出
-
-```
-============================================================
-阶段1: 数据加载
-============================================================
-  节点总数    : 973
-  正样本边数  : 1923
-  特征维度    : 64
-  药物节点数  : 549
-  蛋白质节点数: 424
-
-阶段2: 图预处理
-...
-阶段3: NDLS-F 特征平滑（计算每个节点最优传播跳数 h_v）
-  节点收敛比例: XX.X%
-...
-阶段6: 10 折分层交叉验证
-  Fold  1 | AUC = 0.XXXX | AUPRC = 0.XXXX
-  ...
-  Fold 10 | AUC = 0.XXXX | AUPRC = 0.XXXX
-
-阶段7: 结果汇总
-  Mean AUC   : 0.XXXX ± 0.XXXX
-  Mean AUPRC : 0.XXXX ± 0.XXXX
-  ROC 曲线已保存至: .../results/roc_curve.png
-```
+如果你希望脚本运行结果与 Notebook 保持一致，建议始终在同一个 Jupyter 虚拟环境中执行。
 
 ---
 
-## 6. 核心概念解析
+## 7. 教学建议
 
-### 6.1 非线性扩散局部平滑（NDLS）
+课堂讲授时建议把重点放在以下三个问题上：
 
-传统图神经网络对所有节点使用相同的传播跳数，容易导致 **过平滑**（over-smoothing）：
-节点特征趋于一致，丧失局部结构信息。
+1. 为什么图传播会导致过平滑？
+2. NDLS-F 中“每个节点不同跳数”的设计意义是什么？
+3. 为什么在 DTI 预测中 `AUPRC` 往往和 `AUC` 一样重要？
 
-NDLS 的解决思路：
-- 逐跳传播特征 $X^{(k)} = \hat{A} \cdot X^{(k-1)}$
-- 计算全局稳态 $X_\infty = \pi^\top X$（随机游走平稳分布加权）
-- 为每个节点独立确定停止跳数：$h_v = \min\{k : \|X^{(k)}_v - X^\infty_v\|_2 < \varepsilon\}$
+如果作为作业扩展，可以进一步让学生：
 
-### 6.2 增广随机游走归一化
-
-$$\hat{A} = \tilde{D}^{-1}\tilde{A}, \quad \tilde{A} = A + I$$
-
-加入自环后行归一化，保证随机游走的马尔可夫性。
-
-### 6.3 DTI 预测框架
-
-```
-药物节点嵌入 emb(d)  ──┐
-                       ├─ 拼接 → GBM 分类器 → P(DTI 存在)
-靶点节点嵌入 emb(t)  ──┘
-```
-
----
-
-## 7. 关键参数说明
-
-| 参数 | 默认值 | 含义 |
-|---|---|---|
-| `k1` | 200 | NDLS-F 最大传播跳数 |
-| `epsilon1` | 0.03 | NDLS-F 收敛阈值（越小越严格） |
-| `hidden` | 64 | DNN 嵌入维度 |
-| `dropout` | 0.5 | Dropout 比率 |
-| `N_ESTIMATORS` | 499 | GBM 弱学习器数量 |
-| `MAX_DEPTH` | 7 | GBM 每棵树最大深度 |
-| `SUBSAMPLE` | 0.85 | GBM 样本采样比例 |
+- 修改 `k1`、`epsilon1`
+- 比较 5 折与 10 折结果
+- 增加结果导出功能
 
 ---
 
 ## 8. 参考文献
 
-```
-@article{iGRLDTI,
-  title   = {iGRLDTI: An Improved Graph Representation Learning Method
-             for Predicting Drug-Target Interactions over Heterogeneous
-             Biological Information Network},
-  journal = {Bioinformatics},
-  year    = {2023}
-}
-```
+- *iGRLDTI: An Improved Graph Representation Learning Method for Predicting Drug-Target Interactions over Heterogeneous Biological Information Network*.
